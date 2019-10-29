@@ -5,7 +5,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debugger Current File",
+      "name": "Debugger Current TS",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "sourceMaps": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "args": [
+        "${relativeFile}"
+      ],
+      "runtimeArgs": [
+        "--nolazy",
+        "-r",
+        "ts-node/register"
+      ]
+    },
+    {
+      "name": "Debugger Current JS",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceRoot}",
